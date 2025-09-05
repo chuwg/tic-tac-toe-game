@@ -298,3 +298,55 @@ button.active:hover {
     width: 100%;
   }
 }
+
+/* 모바일 최적화 */
+@media (max-width: 768px) {
+  .game {
+    padding: 10px;
+  }
+  
+  .section {
+    padding: 15px;
+    margin-bottom: 15px;
+  }
+  
+  .square {
+    height: 40px;
+    width: 40px;
+    font-size: 24px;
+  }
+  
+  .button-group {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .button-group button {
+    width: 100%;
+    padding: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .square {
+    height: 35px;
+    width: 35px;
+    font-size: 20px;
+  }
+  
+  .board {
+    padding: 10px;
+  }
+}
+
+/* 터치 최적화 */
+.square {
+  min-height: 44px; /* 터치하기 쉬운 크기 */
+  min-width: 44px;
+  touch-action: manipulation; /* 더블탭 방지 */
+}
+
+button {
+  min-height: 44px;
+  touch-action: manipulation;
+}
